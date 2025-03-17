@@ -1,80 +1,80 @@
-# BrokeNoMore: AI Financial Advisor for College Students
+# BrokeNoMore - AI Financial Advisor for College Students
 
-An AI-powered financial decision helper specifically designed for college students to make smarter spending choices.
+BrokeNoMore is an AI-powered financial advisor designed specifically for college students. It helps users manage their finances, track expenses, and make smarter financial decisions during their college years.
 
-## Overview
+## Project Structure
 
-BrokeNoMore analyzes users' financial transactions and helps them make informed spending decisions by considering their unique financial situation, spending habits, and the necessity of potential purchases. The application aims to prevent impulsive buying decisions and promote financial wellness among college students.
+The project is organized into two main directories:
+
+- `backend/`: FastAPI backend with SQLite database
+- `frontend/`: Next.js frontend with TypeScript and Tailwind CSS
 
 ## Features
 
-- Bank statement analysis with college-specific categorization
-- AI-driven purchase decision assistant
-- Student behavior learning system
-- Financial health metrics tailored to academic cycles
+- Google OAuth authentication
+- Expense tracking and categorization
+- Budget planning and management
+- Financial insights and recommendations
+- Financial education resources
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.9+
-- FastAPI
-- SQLite (for development)
+- Python 3.8+
+- Node.js 18+
+- npm or yarn
 
-### Installation
+### Backend Setup
 
-```bash
-# Clone the repository
-git clone https://github.com/tashrique/BrokeNoMore-AI-Financial-Advisor-for-College-Students.git
-cd BrokeNoMore-AI-Financial-Advisor-for-College-Students
+1. Navigate to the backend directory:
+   ```
+   cd backend
+   ```
 
-# Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+2. Create and activate a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-# Install dependencies
-pip install -r requirements.txt
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-# Run the application
-uvicorn app.main:app --reload
-```
+4. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   - Update the values in `.env` with your Google OAuth credentials
 
-## Project Structure
+5. Run the backend server:
+   ```
+   python run.py
+   ```
 
-```
-├── app/
-│   ├── api/
-│   │   ├── endpoints/
-│   │   │   ├── auth.py
-│   │   │   ├── transactions.py
-│   │   │   └── purchase.py
-│   │   └── api.py
-│   ├── core/
-│   │   ├── config.py
-│   │   └── security.py
-│   ├── db/
-│   │   ├── base.py
-│   │   └── models.py
-│   ├── models/
-│   │   └── user.py
-│   ├── services/
-│   │   ├── auth.py
-│   │   ├── transaction_analyzer.py
-│   │   └── purchase_advisor.py
-│   ├── utils/
-│   │   ├── parsers.py
-│   │   └── validators.py
-│   └── main.py
-├── tests/
-│   ├── api/
-│   ├── services/
-│   └── conftest.py
-├── .env.example
-├── .gitignore
-├── requirements.txt
-└── README.md
-```
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Set up environment variables:
+   - Copy `.env.example` to `.env.local`
+   - Update the values in `.env.local` with your Google OAuth credentials
+
+4. Run the development server:
+   ```
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the LICENSE file for details.
